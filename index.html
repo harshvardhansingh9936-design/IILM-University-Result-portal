@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IILM University - Student Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- University Header -->
+        <header class="university-header">
+
+            <img
+                src="logo.webp"
+                alt="IILM University"
+                class="university-logo"
+            >
+
+            <div class="university-heading">
+                <h1>IILM University Greater Noida</h1>
+                <p>Student Result Portal</p>
+            </div>
+
+        </header>
+
+
+        <!-- Result Search -->
+        <main class="search-container">
+
+            <div class="search-card">
+
+                <h2>Student Result</h2>
+
+                <p class="search-description">
+                    Enter the student's Roll Number and Name to view the result.
+                </p>
+
+
+                <div class="form-group">
+
+                    <label for="rollNumber">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="Enter Roll Number"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter Student Name"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    onclick="searchResult()"
+                    class="view-result-button"
+                >
+                    View Result
+                </button>
+
+
+                <p id="errorMessage" class="error-message"></p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Result -->
+        <section
+            id="resultSection"
+            class="result-container"
+        >
+
+            <div class="result-sheet">
+
+                <!-- Result Header -->
+                <div class="result-sheet-header">
+
+                    <img
+                        src="logo.webp"
+                        alt="IILM University"
+                        class="result-logo"
+                    >
+
+                    <div class="result-university-details">
+
+                        <h1>IILM University Greater Noida</h1>
+
+                        <p>
+                            Plot No. 16-18, Knowledge Park-II,
+                            Gautam Buddha Nagar
+                        </p>
+
+                        <p>
+                            UTTAR PRADESH-201308, INDIA
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Grade Card Title -->
+
+                <div class="grade-card-title">
+
+                    <h2>GRADE CARD - Sem 3</h2>
+
+                    <p>
+                        B.Tech Computer Science and Engineering
+                    </p>
+
+                </div>
+
+
+                <!-- Student Information -->
+
+                <div class="student-details">
+
+                    <div class="student-detail-row">
+
+                        <div class="detail-item">
+                            <span>Student Name</span>
+                            <strong id="resultName"></strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Roll Number</span>
+                            <strong id="resultRoll"></strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-detail-row">
+
+                        <div class="detail-item">
+                            <span>Course</span>
+                            <strong>
+                                B.Tech Computer Science and Engineering
+                            </strong>
+                        </div>
+
+                        <div class="detail-item">
+                            <span>Programme</span>
+                            <strong>2024 - 2028</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Result Table -->
+
+                <div class="table-wrapper">
+
+                    <table class="result-table">
+<thead>
+
+    <tr>
+
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Credit</th>
+        <th>Grade Obtained</th>
+        <th>Grade Points</th>
+        <th>Credit Points</th>
+
+    </tr>
+
+</thead>
+
+
+                        <tbody id="resultTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Result Summary -->
+
+                <div class="result-summary">
+
+                    <div class="summary-box">
+
+                        <span>Total Credits Obtained</span>
+
+                        <strong id="totalCredits"></strong>
+
+                    </div>
+
+
+                    <div class="summary-box">
+
+                        <span>Total Credit Points</span>
+
+                        <strong id="totalCreditPoints"></strong>
+
+                    </div>
+
+
+                    <div class="summary-box">
+
+                        <span>SGPA</span>
+
+                        <strong id="sgpa"></strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Issue Information -->
+
+                <div class="result-footer-info">
+
+                    <p>
+                        <strong>Issue Date:</strong>
+                        27/Feb/2026
+                    </p>
+
+                </div>
+
+
+                <div class="print-area">
+
+                    <button
+                        type="button"
+                        onclick="window.print()"
+                        class="print-button"
+                    >
+                        Print Result
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer class="site-footer">
+
+            <p>
+                IILM University Greater Noida
+            </p>
+
+            <p>
+                Student Result Portal
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

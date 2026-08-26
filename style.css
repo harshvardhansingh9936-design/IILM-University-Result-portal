@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f3f6;
+    color: #1d1d1d;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   UNIVERSITY HEADER
+   ========================= */
+
+.university-header {
+    background: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.university-logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.university-heading {
+    text-align: left;
+}
+
+.university-heading h1 {
+    color: #12244b;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.university-heading p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* =========================
+   SEARCH SECTION
+   ========================= */
+
+.search-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+.search-card {
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-card h2 {
+    text-align: center;
+    color: #12244b;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.search-description {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+}
+
+.form-group input:focus {
+    border-color: #12244b;
+    box-shadow: 0 0 0 2px rgba(18, 36, 75, 0.08);
+}
+
+
+/* View result button */
+
+.view-result-button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background: #12244b;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.view-result-button:hover {
+    background: #1c376f;
+}
+
+.error-message {
+    min-height: 20px;
+    margin-top: 14px;
+    text-align: center;
+    color: #c62828;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESULT AREA
+   ========================= */
+
+.result-container {
+    display: none;
+    width: 100%;
+    padding: 30px 20px 60px;
+}
+
+.result-sheet {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    padding: 42px 45px;
+}
+
+
+/* Result header */
+
+.result-sheet-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #222;
+}
+
+.result-logo {
+    width: 155px;
+    height: auto;
+    object-fit: contain;
+}
+
+.result-university-details {
+    text-align: center;
+}
+
+.result-university-details h1 {
+    color: #12244b;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.result-university-details p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+/* Grade card heading */
+
+.grade-card-title {
+    text-align: center;
+    margin: 25px 0 20px;
+}
+
+.grade-card-title h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.grade-card-title p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   STUDENT DETAILS
+   ========================= */
+
+.student-details {
+    border: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+.student-detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-item {
+    padding: 11px 14px;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.detail-item:nth-child(2) {
+    border-right: none;
+}
+
+.student-detail-row:last-child .detail-item {
+    border-bottom: none;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.detail-item strong {
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESULT TABLE
+   ========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #777;
+    padding: 11px 9px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.result-table th {
+    background: #eeeeee;
+    color: #111;
+    font-weight: 700;
+}
+
+.result-table th:nth-child(1),
+.result-table td:nth-child(1) {
+    width: 13%;
+}
+
+.result-table th:nth-child(2),
+.result-table td:nth-child(2) {
+    width: 43%;
+    text-align: left;
+}
+
+.result-table th:nth-child(3),
+.result-table td:nth-child(3) {
+    width: 10%;
+}
+
+.result-table th:nth-child(4),
+.result-table td:nth-child(4) {
+    width: 10%;
+}
+
+.result-table th:nth-child(5),
+.result-table td:nth-child(5) {
+    width: 24%;
+}
+
+
+/* =========================
+   RESULT SUMMARY
+   ========================= */
+
+.result-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 22px;
+    border: 1px solid #888;
+}
+
+.summary-box {
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #888;
+}
+
+.summary-box:last-child {
+    border-right: none;
+}
+
+.summary-box span {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.summary-box strong {
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOTER INFORMATION
+   ========================= */
+
+.result-footer-info {
+    margin-top: 28px;
+    font-size: 13px;
+    border-top: 1px solid #aaa;
+    padding-top: 12px;
+}
+
+
+/* Print button */
+
+.print-area {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.print-button {
+    padding: 11px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #12244b;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #1c376f;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    background: #12244b;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+}
+
+.site-footer p:first-child {
+    margin-bottom: 4px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .university-header {
+        padding: 16px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .university-logo {
+        width: 130px;
+    }
+
+    .university-heading {
+        text-align: center;
+    }
+
+    .university-heading h1 {
+        font-size: 21px;
+    }
+
+    .university-heading p {
+        font-size: 14px;
+    }
+
+    .search-container {
+        margin: 30px auto;
+    }
+
+    .search-card {
+        padding: 25px 20px;
+    }
+
+    .result-sheet {
+        padding: 25px 15px;
+    }
+
+    .result-sheet-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .result-logo {
+        width: 125px;
+    }
+
+    .result-university-details h1 {
+        font-size: 19px;
+    }
+
+    .student-detail-row {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item,
+    .detail-item:nth-child(2) {
+        border-right: none;
+        border-bottom: 1px solid #999;
+    }
+
+    .student-detail-row:last-child .detail-item:last-child {
+        border-bottom: none;
+    }
+
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-box {
+        border-right: none;
+        border-bottom: 1px solid #888;
+    }
+
+    .summary-box:last-child {
+        border-bottom: none;
+    }
+
+    .result-table {
+        min-width: 750px;
+    }
+}
+
+
+/* =========================
+   PRINT
+   ========================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .university-header,
+    .search-container,
+    .site-footer,
+    .print-area {
+        display: none !important;
+    }
+
+    .result-container {
+        display: block !important;
+        padding: 0;
+    }
+
+    .result-sheet {
+        border: none;
+        max-width: none;
+        padding: 10px;
+        box-shadow: none;
+    }
+}
